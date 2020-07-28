@@ -22,7 +22,40 @@ paths:
       responses:
         '200':
           description: OK
-      description: "Update or replace a kiwi.com promocodes along with its additional information. Additional information includes the booking ID, the reasons for the promocode's creation, if it was used, the amount (€) the promocode covers, as well as the email account details of promocode's user.  "
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: string
+                    example: AAAAQ
+                    description: "The promocode's unique alphanumeric code"
+                  bid:
+                    type: integer
+                    example: 123654
+                    description: The booking ID
+                  used:
+                    type: boolean
+                    example: 'false'
+                    description: "The status of promocode's use"
+                  amount:
+                    type: integer
+                    example: 152
+                    description: The amount in euro the promcode covers
+                  email:
+                    type: string
+                    example: joansmyth@email.com
+                    description: Email details of promocode user
+                required:
+                  - code
+                  - bid
+                  - used
+                  - amount
+                  - email
+      description: "Update or replace a kiwi.com promocode along with its additional information. Additional information includes the booking ID, the reasons for the promocode's creation, if it was used, the amount (€) the promocode covers, as well as the email account details of promocode's user.  "
       tags:
         - Promocode endpoints
       parameters:
