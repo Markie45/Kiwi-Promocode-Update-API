@@ -1,0 +1,10 @@
+openapi: 3.0.0
+info:
+  title: Kiwi Promocode Update API
+  version: '1.0'
+  description: "Update or replace an existing kiwi.com promotional code along with its associated information. Associated information includes the booking ID, reasons for promotional code's creation (issues with a previous booking), if the promotional code was used, the amount (in euro) that the promotional code covers, as well as the email account details of promotional code's user. **Note**: The Kiwi Promocode Update API is only accessible (via https) to authorized users. **Note**: This API connects directly to the kiwi.com backend; consequently, the Kiwi team recommends that you only use this API to interact with our promotional codes. **Note**: This API does not apply to new promotional codes; moreover, parameters with null values may not get passed to the API.   "
+servers:
+  - url: 'http://localhost:3000'
+paths: {}
+components:
+  schemas: {}
