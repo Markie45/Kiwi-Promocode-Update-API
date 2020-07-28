@@ -20,8 +20,6 @@ paths:
       summary: PUT promocode
       operationId: put-promocode
       responses:
-        '200':
-          description: OK
         '201':
           description: Created
           content:
@@ -64,6 +62,12 @@ paths:
                         used: false
                         amount: 152
                         email: joansmyth@email.com
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/unauthorized_response'
       description: "Update or replace a kiwi.com promocode along with its additional information. Additional information includes the booking ID, the reasons for the promocode's creation, if it was used, the amount (€) the promocode covers, as well as the email account details of promocode's user.  "
       tags:
         - Promocode endpoints
@@ -101,7 +105,27 @@ paths:
       security:
         - app_id: []
 components:
-  schemas: {}
+  schemas:
+    unauthorized_response:
+      title: unauthorized_response
+      type: object
+      properties:
+        code:
+          type: string
+        bid:
+          type: integer
+        used:
+          type: boolean
+        amount:
+          type: integer
+        email:
+          type: string
+      required:
+        - code
+        - bid
+        - used
+        - amount
+        - email
   securitySchemes:
     app_id:
       type: http
