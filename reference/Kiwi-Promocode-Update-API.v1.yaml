@@ -55,6 +55,15 @@ paths:
                   - used
                   - amount
                   - email
+              examples:
+                Schema Example:
+                  value:
+                    promocodes:
+                      - code: AAAAQ
+                        bid: null
+                        used: false
+                        amount: 152
+                        email: joansmyth@email.com
       description: "Update or replace a kiwi.com promocode along with its additional information. Additional information includes the booking ID, the reasons for the promocode's creation, if it was used, the amount (€) the promocode covers, as well as the email account details of promocode's user.  "
       tags:
         - Promocode endpoints
