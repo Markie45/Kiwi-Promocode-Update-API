@@ -23,6 +23,39 @@ paths:
         '200':
           description: OK
       description: "Update or replace a kiwi.com promocodes along with its additional information. Additional information includes the booking ID, the reasons for the promocode's creation, if it was used, the amount (€) the promocode covers, as well as the email account details of promocode's user.  "
+      tags:
+        - Promocode endpoints
+      parameters:
+        - schema:
+            type: string
+          in: query
+          name: code
+          description: '**Code**. Search by unique alphnumeric code. *Example: AAAAQ*. '
+          required: true
+        - schema:
+            type: integer
+          in: query
+          name: bid
+          description: '**Bid**. Calls the booking ID (*Example: 203589*).  '
+          required: true
+        - schema:
+            type: boolean
+          in: query
+          name: used
+          description: '**Used**. If *true*, the promocode has been used.'
+          required: true
+        - schema:
+            type: integer
+          in: query
+          name: amount
+          description: '**Amount**. Calls the monetary amount in euro that the promocode covers. *Example: 450.00*   '
+          required: true
+        - schema:
+            type: string
+          in: query
+          name: email
+          description: '**Email**. Calls the email details of promocode users. *Example: joansmyth@email.com*.  '
+          required: true
 components:
   schemas: {}
   securitySchemes:
