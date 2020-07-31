@@ -1,2 +1,3 @@
 # Kiwi-Promocode-Update-API
-Updates or replaces a Kiwi promocode
+
+Update or replace an existing kiwi.com promocode along with its related information. Related information includes the booking ID, why the promocode wass created, if the promotional code was already used, the monetary amount (euro) that the promocode covers, as well as the email account details of promocode's user. **Note**: The Kiwi Promocode Update API is only accessible (via https) to authorized users. **Note**: This API connects directly to the kiwi.com backend; consequently, the Kiwi team recommends that you only use this API to interact with our promotional codes. **Note**: You cannot apply this API to new promotional codes; moreover, parameters with nulll values will not get passed to the API.
