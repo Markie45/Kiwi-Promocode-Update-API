@@ -2,7 +2,7 @@ openapi: 3.0.0
 info:
   title: Kiwi Promocode Update API
   version: '1.0'
-  description: "Update or replace an existing kiwi.com promocode along with its related information. Related information includes the booking ID, why the promocode wass created, if the promotional code was already used, the monetary amount (euro) that the promocode covers, as well as the email account details of promocode's user. **Note**: The Kiwi Promocode Update API is only accessible (via https) to authorized users. **Note**: This API connects directly to the kiwi.com backend; consequently, the Kiwi team recommends that you only use this API to interact with our promotional codes. **Note**: You cannot apply this API to new promotional codes; moreover, parameters with nulll values will not get passed to the API.   "
+  description: "Update or replace an existing kiwi.com promocode along with its related information. Related information includes the booking ID, why the promocode was created, if the promotional code was already used, the monetary amount (euro) that the promocode covers, as well as the email account details of promocode's user. **Note**: The Kiwi Promocode Update API is only accessible (via https) to authorized users. **Note**: This API connects directly to the kiwi.com backend; consequently, the Kiwi team recommends that you only use this API to interact with our promotional codes. **Note**: You cannot apply this API to new promotional codes; moreover, parameters with null values will not get passed to the API.   "
   contact:
     name: Kiwi Support
     url: 'https://kiwi.com/api'
@@ -42,7 +42,7 @@ paths:
                   amount:
                     type: integer
                     example: 152
-                    description: The amount in euro the promcode covers
+                    description: The amount in euro the promocode covers
                   email:
                     type: string
                     example: joansmyth@email.com
@@ -76,7 +76,7 @@ paths:
             type: string
           in: query
           name: code
-          description: '**Code**. Search by unique alphnumeric code. *Example: AAAAQ*. '
+          description: '**Code**. Search by unique alphanumeric code. *Example: AAAAQ*. '
           required: true
         - schema:
             type: integer
